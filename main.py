@@ -131,7 +131,7 @@ class HashTags(object):
                 data = json.load(input)
 
             table = PrettyTable(["Word(#)", "Documents", "Sentences containing the word"])
-            table.align["Sentences containing the word"] = "l"  # Left align city names
+            table.align["Sentences containing the word"] = "l"  
             for key in data:
                 table.add_row([key, ", \n".join(data[key]['paths']),
                                 self._insert_new_lines("\n\n".join(data[key]['sentences']), 100)])
